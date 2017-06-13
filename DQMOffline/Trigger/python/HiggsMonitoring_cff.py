@@ -1,9 +1,12 @@
 
 import FWCore.ParameterSet.Config as cms
+
 from DQMOffline.Trigger.PhotonMonitor_cff import *
 from DQMOffline.Trigger.VBFMETMonitor_cff import *
 from DQMOffline.Trigger.VBFTauMonitor_cff import *
 from DQMOffline.Trigger.HiggsMonitoring_cfi import hltHIGmonitoring
+from DQMOffline.Trigger.MssmHbbBtagTriggerMonitor_cff import *
+from DQMOffline.Trigger.MssmHbbMonitoring_cff import *
 
 #######for HLT_Ele23_Ele12_CaloIdL_TrackIdL_IsoVL_DZ####
 ele23Ele12CaloIdLTrackIdLIsoVL_dzmon = hltHIGmonitoring.clone()
@@ -152,8 +155,10 @@ mu8diEle12CaloIdLTrackIdL_dz.nmuons = cms.uint32(1)
 mu8diEle12CaloIdLTrackIdL_dz.numGenericTriggerEventPSet.hltPaths = cms.vstring("HLT_Mu8_DiEle12_CaloIdL_TrackIdL_DZ_v*")
 mu8diEle12CaloIdLTrackIdL_dz.denGenericTriggerEventPSet.hltPaths = cms.vstring("HLT_Mu8_DiEle12_CaloIdL_TrackIdL_v*")
 
+
 ###############################Higgs Monitor HLT##############################################
 higgsMonitorHLT = cms.Sequence(
+
     higgsinvHLTJetMETmonitoring
   + higgsHLTDiphotonMonitoring
   + higgstautauHLTVBFmonitoring
@@ -171,4 +176,7 @@ higgsMonitorHLT = cms.Sequence(
   + diMu9Ele9CaloIdLTrackIdL_muleg
   + diMu9Ele9CaloIdLTrackIdL_eleleg
   + diMu9Ele9CaloIdLTrackIdL_dz
+  + mssmHbbBtagTriggerMonitor 
+  + mssmHbbMonitorHLT 
 )
+
