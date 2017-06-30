@@ -3,6 +3,8 @@ import FWCore.ParameterSet.Config as cms
 from DQMServices.Core.DQMEDHarvester import DQMEDHarvester
 from DQMOffline.Trigger.VBFMETMonitor_Client_cff import *
 from DQMOffline.Trigger.VBFTauMonitor_Client_cff import *
+from DQMOffline.Trigger.MssmHbbBtagTriggerMonitor_Client_cfi import *
+from DQMOffline.Trigger.MssmHbbMonitoring_Client_cfi import *
 
 ###############Same flavour dilepton with dz cuts#######################
 ele23Ele12CaloIdLTrackIdLIsoVL_effdz = DQMEDHarvester("DQMGenericClient",
@@ -379,13 +381,6 @@ higgsClient = cms.Sequence(
   + mu12TrkIsoVVLEle23CaloIdLTrackIdLIsoVLDZ_effmu
   + mu23TrkIsoVVLEle12CaloIdLTrackIdLIsoVLDZ_effele
   + mu23TrkIsoVVLEle12CaloIdLTrackIdLIsoVLDZ_effmu
-=======
-from DQMOffline.Trigger.MssmHbbBtagTriggerMonitor_Client_cfi import *
-from DQMOffline.Trigger.MssmHbbMonitoring_Client_cfi import *
-
-higgsClient = cms.Sequence(
-    vbfmetClient
   + mssmHbbBtagTriggerEfficiency 
   + mssmHbbHLTEfficiency 
-
 )
