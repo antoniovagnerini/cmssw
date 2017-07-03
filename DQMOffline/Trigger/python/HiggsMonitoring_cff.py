@@ -6,7 +6,7 @@ from DQMOffline.Trigger.MssmHbbMonitoring_cff import *
 
 higgsMonitorHLT = cms.Sequence(
 
-    higgsinvHLTJetMETmonitoring +
+    higgsinvHLTJetMETmonitoring
     mssmHbbBtagTriggerMonitor +
     mssmHbbMonitorHLT +
 )
