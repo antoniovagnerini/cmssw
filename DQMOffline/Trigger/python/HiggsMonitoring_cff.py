@@ -179,4 +179,3 @@ higgsMonitorHLT = cms.Sequence(
   + mssmHbbBtagTriggerMonitor 
   + mssmHbbMonitorHLT 
 )
-
