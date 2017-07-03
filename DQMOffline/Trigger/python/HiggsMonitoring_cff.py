@@ -158,7 +158,6 @@ mu8diEle12CaloIdLTrackIdL_dz.denGenericTriggerEventPSet.hltPaths = cms.vstring("
 
 ###############################Higgs Monitor HLT##############################################
 higgsMonitorHLT = cms.Sequence(
-
     higgsinvHLTJetMETmonitoring
   + higgsHLTDiphotonMonitoring
   + higgstautauHLTVBFmonitoring
@@ -179,3 +178,4 @@ higgsMonitorHLT = cms.Sequence(
   + mssmHbbBtagTriggerMonitor 
   + mssmHbbMonitorHLT 
 )
+
